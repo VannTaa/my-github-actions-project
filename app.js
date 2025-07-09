@@ -3,11 +3,14 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello, GitHub Actions!');
+res.send('Hello, GitHub Actions!');
+
 });
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-});
+module.exports = app;
 
-module.exports = app; // ✅ allows testing to work
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`);
+  });
+}
