@@ -28,3 +28,6 @@ jobs:
       - name: Change permission
         run: |
           chmod +x ./node_modules/.bin.mocha
+      - name: Run tests
+        run: |
+          npm test
