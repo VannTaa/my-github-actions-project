@@ -5,6 +5,6 @@ describe('GET /', function () {
   it('should return Hello, GitHub Actions!', function (done) {
     request(app)
       .get('/')
-      .expect('Hello, Nika!', done);
+      .expect('Hello, Nika!11', done);
   });
 });
